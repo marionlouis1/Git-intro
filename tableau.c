@@ -6,15 +6,10 @@ int main ()
 
     for (i = 0; i < 100; i++) 
     {
-        if i%2 == 0 {
+        if (i %2 == 0) {
             t[n] = i ; 
+            printf("%d\n", t[n]);
             n = n+1;
-        }
-    }
-
-    for (i = 0 ; i < 50 ; i++)
-        {
-            printf("%d\n", tableau[i]);
         }
 
         return 0;
