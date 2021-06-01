@@ -4,14 +4,16 @@ int main ()
 {
     int t[50], n=0, i;
 
-    for (i = 0; i < 100; i++) 
+    for (i = 0; i <= 100; i++) 
     {
-        if (i %2 == 0) {
+        if (i % 2 == 0) {
             t[n] = i ; 
             printf("%d\n", t[n]);
             n = n+1;
+            i = i+1;
         }
 
-        return 0;
+
     }
+    return 0 ; 
 }
