@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "module.c"
 #include "module.h"
 
 #define PI 3.14
