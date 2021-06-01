@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main()
 {
   int n, nbr1 = 0, nbr2 = 1, suivant, i;
