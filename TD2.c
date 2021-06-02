@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "module.c"
 #include "module.h"
-
+#include "math.h"
 #define PI 3.14
 
 
@@ -10,7 +10,7 @@ void sum_tab_i (int tab1[], int tab2[],int n, int i, int tab_res[]) {
     
 }
 
-int sum ( int tab[], int n ) {
+int sum ( int tab[], int n ) { 
     int res = 0;
     for (int i = 0 ; i<n ; i++)
     {
@@ -33,9 +33,9 @@ void print_tableau (int tab[] , int n) {
     }
 }
 
-
 int main() {
-   /* printf(" addone(5) = %d\n", addone(5)); //UTILISATION
+    /* 
+    printf(" addone(5) = %d\n", addone(5)); //UTILISATION
     
     float a = PI;
     printf(" pi = a=%f\n",a);
@@ -57,11 +57,13 @@ int main() {
         sum_tab_i (tab1, tab2, n, i, tab_res) ; 
     }
     print_tableau (tab_res, n);
-    */
+    
 
     //Affichage d'une chaîne de caractères tapée à l'écran
     char chaine[60];
     printf("Entrez la chaîne de caractères\n");
     scanf("%s", &chaine);
     printf("La chaîne que vous venez de taper est : %s\n Est-ce exact ?\n",chaine);
+
+    */
 }
