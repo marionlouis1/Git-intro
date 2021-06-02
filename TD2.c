@@ -35,24 +35,24 @@ void print_tableau (int tab[] , int n) {
 
 int palindrome (char s1[]) {
     int n = mylen(s1) ; 
+    // printf("%d\n", n) ;
     if (n%2 == 0) {
+        printf("pair\n");
         for (int i=0 ; i<n/2 ; i++) {
-            if (s1[i] != s1[n-i]) {
+            if (s1[i] != s1[n-i-1]) {
                 return 0;
-            } else {
-                return 1;
             }
         }
 
     } else if (n%2 == 1) {
+        printf("impair\n");
         for (int i=0 ; i<=(n-1)/2 ; i++) {
-            if (s1[i] != s1[n-i]) {
+            if (s1[i] != s1[n-i-1]) {
                 return 0;
-            } else {
-                return 1;
             }
         }
     }
+    return 1;
 }
 int main() {
     /* 
@@ -88,6 +88,6 @@ int main() {
     */
 
     // Teste si une chaîne de caractères est un palyndrome :
-    char s1[] = "sas";
-    printf("%d", palindrome (s1));
+    char s1[] = "salas";
+    printf("%d\n", palindrome (s1));
 }
