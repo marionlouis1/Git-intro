@@ -33,6 +33,27 @@ void print_tableau (int tab[] , int n) {
     }
 }
 
+int palindrome (char s1[]) {
+    int n = mylen(s1) ; 
+    if (n%2 == 0) {
+        for (int i=0 ; i<n/2 ; i++) {
+            if (s1[i] != s1[n-i]) {
+                return 0;
+            } else {
+                return 1;
+            }
+        }
+
+    } else if (n%2 == 1) {
+        for (int i=0 ; i<=(n-1)/2 ; i++) {
+            if (s1[i] != s1[n-i]) {
+                return 0;
+            } else {
+                return 1;
+            }
+        }
+    }
+}
 int main() {
     /* 
     printf(" addone(5) = %d\n", addone(5)); //UTILISATION
@@ -64,6 +85,9 @@ int main() {
     printf("Entrez la chaîne de caractères\n");
     scanf("%s", &chaine);
     printf("La chaîne que vous venez de taper est : %s\n Est-ce exact ?\n",chaine);
-
     */
+
+    // Teste si une chaîne de caractères est un palyndrome :
+    char s1[] = "sas";
+    printf("%d", palindrome (s1));
 }
