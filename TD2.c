@@ -4,6 +4,12 @@
 
 #define PI 3.14
 
+
+void sum_tab_i (int tab1[], int tab2[],int n, int i, int tab_res[]) {
+    tab_res[i] = tab1[i] + tab2 [i];
+    
+}
+
 int sum ( int tab[], int n ) {
     int res = 0;
     for (int i = 0 ; i<n ; i++)
@@ -20,15 +26,36 @@ int mylen ( char s[]) {
     return compteur;
 }
 
+
+void print_tableau (int tab[] , int n) {
+    for (int i=0 ; i<n ; i++) {
+        printf("%i\n", tab[i]);
+    }
+}
+
+
 int main() {
-    printf(" addone(5) = %d\n", addone(5)); //UTILISATION
+   /* printf(" addone(5) = %d\n", addone(5)); //UTILISATION
+    
     float a = PI;
     printf(" pi = a=%f\n",a);
+    
     int b = 10 ;
     int tab[10] = {1,2,3,4,5,6,7,8,9,10};
     printf(" sum({b} = %d\n" , sum(tab, b));
+    
     char seq[10] = "salutlegar";
     printf("la séquence est : %s\n", seq);
     printf("longueur de seq est : %d\n", mylen(seq));
-}
+    */
 
+    int n  = 10 ;
+    int tab1[] = {1,2,3,4,5,6,7,8,9,10} ; 
+    int tab2[] = {10,9,8,7,6,5,4,3,2,1} ;
+    int tab_res[n];
+    for (int i=0 ; i<n ; i++) { // ON CREE LE TABLEAU RESULTANT DE LA SOMME DES DEUX AUTRES
+        sum_tab_i (tab1, tab2, n, i, tab_res) ; 
+    }
+    print_tableau (tab_res, n);
+
+}
