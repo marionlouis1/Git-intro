@@ -4,6 +4,7 @@
 
 int main() {
 
-//Exercice 1
-s1 = 
+//Exercice 0
+printf("Approve moi bogoss");
+
 }
