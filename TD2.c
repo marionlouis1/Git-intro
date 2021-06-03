@@ -88,6 +88,6 @@ int main() {
     */
 
     // Teste si une chaîne de caractères est un palyndrome :
-    char s1[] = "salas";
+    char s1[] = "sala";
     printf("%d\n", palindrome (s1));
 }
