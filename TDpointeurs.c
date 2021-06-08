@@ -18,15 +18,23 @@ int mylen2 (char *s ) {
     return compteur;
 }
 
-int* memsizecop (char s[], char *scop) {
+void memsizecop (char s[], char *scop) {
     int p = mylen (s);
-    int *e = malloc(p*sizeof(char)) ;
+    int *e = malloc(p*sizeof(char)+1) ;
     for (int i = 0 ; i<p ; i++) {
-        scop[i] = s[i] ; 
+        *(scop+i) = s[i] ; 
     }
-    return e;
+    *scop(p+1) = '\0'
 }
-
+int occ (char* s, char compa) {
+    int length = mylen2 (s) ; 
+    int compteur = 0 ; 
+    for (int i = 0 ; i<length ; i++) {
+        if (*(s+i) == compa) {
+            compteur ++ ;
+        }
+    }
+}
 
 int main() {
 
@@ -40,8 +48,8 @@ printf("La longueur de la chaîne est : %d\n" , mylen2(s));
 */
 
 // Exercice 2
-char* t = "saluto" ;
+char* t = "salutoo" ;
 printf("J'ai copié la chaîne de caractères %s\n" , t );
-
+printf("Le nombre de o dans la chaîne est %d\n" , occ(s , "o");
 
 }
