@@ -10,17 +10,9 @@ typedef struct _DATE {
 
 } Date ;
 
-Date* create_date (int a, int b, int c) {
-    Date *res = malloc(sizeof(Date));
-    res->day = a;
-    res->month = b;
-    res->year = c;
-    return res;
-}
 
+Date* create_date (int day,int month,int year);
 
-void print_date (Date *date) {
-    printf("%d/%d/%d\n", date->day, date->month, date->year);
-}
+void print_date(Date *date);
 
 #endif
